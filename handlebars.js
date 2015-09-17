@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 //Here is my data object
 
-	var Person = {
+	var context = {
 		"firstName": "Lauren",
 		"lastName": "Beatty",
 		"city": "Maple Grove",
@@ -14,14 +14,16 @@ $(document).ready(function() {
 		"husband": "Tony Thomann",
 		"son1": "Hal Beatty",
 		"son2": "Fritz Thomann",
-		"dog": "Victory Carl"
+		"dog": "Victory Carl",
+		"description": "If you'd like to learn more, click here: ",
+		"example": "<button>Learn More About Lauren</button"
 	};
 
 //Passing my data to the template looks like this:
 //it uses theTemplate var, which uses the Handlebars.compile(whatever your data is);
-//in this case it's the Person object.
+//in this case it's the context object.
 
-var theCompiledHtml = theTemplate(Person);
+var theCompiledHtml = theTemplate(context);
 
 //Putting theCompiledHtml on the page at the .placeholder id
 
